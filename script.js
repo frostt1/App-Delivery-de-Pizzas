@@ -100,6 +100,14 @@ select(".pizzaInfo--addButton").addEventListener("click", () => {
             qt: modalQt,
         });
     }
-
+    updateCart();
     closeModal();
 });
+
+const updateCart = () => {
+    if (cart.length > 0) {
+        select("aside").classList.add("show");
+    } else {
+        select("aside").classList.remove("show");
+    }
+};
